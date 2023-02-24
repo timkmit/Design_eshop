@@ -10,6 +10,7 @@ import NavigationBar from './components/Navibar'
 import Home from './components/Home.js'
 import Users from './components/Users.js'
 import About from './components/About.js'
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/about" element={<About/>} />
         </Routes>
       </Router>
+      <Footer/>
     </>
   );
 }

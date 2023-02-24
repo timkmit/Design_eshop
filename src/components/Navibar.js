@@ -45,7 +45,7 @@ const NavigationBar = () => {
         </Navbar>
         </Styles>
         <Modal show={show} onHide={handleShow}>
-            <Modal.Header closeButton>
+            <Modal.Header closeButton onClick={handleClose}>
                 <Modal.Title>Log In</Modal.Title>
             </Modal.Header>
 
