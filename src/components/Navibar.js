@@ -1,5 +1,5 @@
-import React from "react";
-import { Navbar, Nav, Button, Container } from "react-bootstrap";
+import React, {useState} from "react";
+import { Navbar, Nav, Button, Container, Modal, Form } from "react-bootstrap";
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -14,6 +14,12 @@ const Styles = styled.div `
 `
 
 const NavigationBar = () => {
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return ( 
         <>
         <Styles>
@@ -32,12 +38,37 @@ const NavigationBar = () => {
                 
             </Navbar.Collapse>
             <Nav className="justify-content-end ">
-                    <Button variant="primary" className="me-2">Log In</Button>
-                    <Button variant="primary" className="me-2">Log Out</Button>
+                    <Button variant="primary" className="me-2" onClick={handleShow}>Log In</Button>
+                    <Button variant="primary" className="me-2" onClick={handleShow}>Log Out</Button>
             </Nav>
             </Container>
         </Navbar>
         </Styles>
+        <Modal show={show} onHide={handleShow}>
+            <Modal.Header closeButton>
+                <Modal.Title>Log In</Modal.Title>
+            </Modal.Header>
+
+
+            <Modal.Body>
+                <Form>
+
+                    <Form.Group controlId="fromBasicEmail">
+                        <Form.Label>Email adress</Form.Label>
+                        <Form.Control type="email" placeholder="Enter email" />
+                        <Form.Text className="text-muted">We'll never share your email</Form.Text>
+                    </Form.Group>
+                    <Form.Group controlId="fromBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" placeholder="Enter password" />
+                    </Form.Group>
+                    <Form.Group controlId="fromBasicCheckbox">
+                        <Form.Check type="checkbox" label="Remember me" />
+                    </Form.Group>
+
+                </Form>
+            </Modal.Body>
+        </Modal>
     </>
      );
 }
