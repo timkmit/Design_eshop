@@ -7,7 +7,7 @@ import sheben from '../Slider/sheben.jpg'
 const Slider = () => {
     return ( 
         <Carousel>
-            <Carousel.Item style={{'height': '600px'}}>
+            <Carousel.Item style={{'height': '15rem'}}>
                 <img
                 className="d-block w-100"
                 src={sand}
@@ -19,7 +19,7 @@ const Slider = () => {
             </Carousel.Caption>
             </Carousel.Item>
 
-            <Carousel.Item style={{'height': '600px'}}> 
+            <Carousel.Item style={{'height': '15rem'}}> 
                 <img
                 className="d-block w-100"
                 src={galka}
@@ -31,7 +31,7 @@ const Slider = () => {
             </Carousel.Caption>
             </Carousel.Item>
 
-            <Carousel.Item style={{'height': '600px'}}> 
+            <Carousel.Item style={{'height': '15rem'}}> 
                 <img
                 className="d-block w-100"
                 src={sheben}

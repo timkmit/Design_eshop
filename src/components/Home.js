@@ -10,10 +10,10 @@ const Home = () => {
     return ( 
         <>
         <Slider/>
-        <Container style={{paddingTop: '4rem', paddingBottom: '4rem'}}>
+        <Container style={{paddingTop: '1rem', paddingBottom: '3rem', justifyContent: "center",}}>
             <Row>
                 <Col>
-                    <Card style={{width: '18rem', margin: '0.5rem'}}>
+                    <Card style={{width: '24rem', margin: '0.5rem'}}>
                         <Card.Img variant="top" src={sand} />
                         <Card.Body>
                             <Card.Title>Card title</Card.Title>
@@ -25,7 +25,7 @@ const Home = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card style={{width: '18rem', margin: '0.5rem'}}>
+                    <Card style={{width: '24rem', margin: '0.5rem'}}>
                         <Card.Img variant="top" src={galka} />
                         <Card.Body>
                             <Card.Title>Card title</Card.Title>
@@ -37,7 +37,7 @@ const Home = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card style={{width: '18rem', margin: '0.5rem'}}>
+                    <Card style={{width: '24rem', margin: '0.5rem'}}>
                         <Card.Img variant="top" src={sheben} />
                         <Card.Body>
                             <Card.Title>Card title</Card.Title>
@@ -54,15 +54,16 @@ const Home = () => {
 
         <Jumbotron/>
 
-        <Container style={{ paddingBottom: '4rem'}}>
+        <Container style={{ paddingBottom: '4rem', overflow:"hidden"}}>
             <Row>
+                <Col md={4} style={{position: 'absolute', alignItems: "center"}}>
+                    <h2>ГДЕ МЫ НАХОДИМСЯ</h2>
+                    <p>сида еще можно текст запилить</p>
+                </Col>
                 <Col md={7}>
-                    <img src={sand} height={400}/>
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae49c464eb5051ab06d7f88915096c31227b6e23d54b3d2720ccf6b1479762352&amp;source=constructor" width="1250" height="400" frameborder="0"></iframe>
                 </Col>
-                <Col md={5}>
-                    <h2>MAP MAP</h2>
-                    <p>dshfkjsdahlfkjsahfkjhaskjfhaskjfhaskdjfhksadj</p>
-                </Col>
+                
             </Row>
         </Container>
         </>

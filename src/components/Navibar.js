@@ -28,7 +28,7 @@ const NavigationBar = () => {
 
             
             <Navbar.Brand>БАЗА</Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+            
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Link><Link to="/">Главная</Link></Nav.Link>
@@ -41,6 +41,7 @@ const NavigationBar = () => {
                     <Button variant="primary" className="me-2" onClick={handleShow}>Заказать звонок</Button>
                     
             </Nav>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
             </Container>
         </Navbar>
         </Styles>
